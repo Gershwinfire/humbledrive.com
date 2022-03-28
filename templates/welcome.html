@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome to the Beginning
+{% endblock %}
+
+}
+{% block body %}
+<div style="color:white">
+    <div style="border:white;border-width:10px">
+        <p class="display-1" style="font-family:'Bangers';font-weight:900px;padding-top:100px;text-align:center">Welcome to</p> 
+        <br>
+        <br>
+        <a  href="/index" style="text-decoration:none"><div style="background-color:#051d4d;opacity:0.5;margin-right:550px;margin-left:550px;border-radius:7px">
+            <div style="text-align:center">
+                <p class="enter" style="font-family:'Oswald'">Enter</p>
+            </div>
+        </div></a>
+        <br>
+        <br>
+        <p class="display-1" style="font-family:'Bangers';font-weight:900;text-align:center">Humble Drive</p>
+    </div>
+</div>
+<div class="container">
+    <div class="notborder">
+        <svg onclick="pauseAudio()" xmlns="http://www.w3.org/2000/svg" width="19%" height="19%" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+            <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+        <svg onclick="playAudio()" xmlns="http://www.w3.org/2000/svg" width="19%" height="19%" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+        </svg>
+        <br>
+        <br>
+    </div>
+</div>
+<audio id="intro_music"> 
+    <source src="static/Contrast.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    var x = document.getElementById("intro_music"); 
+    
+    function playAudio() { 
+      x.play(); 
+    } 
+    
+    function pauseAudio() { 
+      x.pause(); 
+    } 
+</script>
+  
+{% endblock %}

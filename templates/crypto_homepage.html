@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+<meta http-equiv=”refresh” content="5" />
+{% block title %}
+Bitcoin/World Markets
+{% endblock %}
+
+
+{% block body %}
+<div style="margin-top:7%;">
+    <div class="crypto_header">
+        <br>Bitcoin Price Action Map</br>
+        <br>24hr Period</br>
+    </div>
+</div>
+<br>
+<div style="margin:auto">
+    <div style="float:left;margin:15px;text-align:center">
+        <h5> Bitcoin Price</h5>
+        <h5>{{ bitcoin_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>Bombay Index Price</h5>
+        <h5>{{ bom_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>Hang Seng Index Price</h5>
+        <h5>{{ hang_seng_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>Japan Exchange Price</h5>
+        <h5>{{ japan_exchange_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>London Exchange Price</h5>
+        <h5>{{ london_stock_price }}</h5>
+    </div>
+</div>
+
+<div style="margin:auto;">
+    <div style="float:left;margin:15px;text-align:center;color:white;">
+        <h5>Nasdaq Price</h5>
+        <h5>{{ nasdaq_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>National Price</h5>
+        <h5>{{ national_stock_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>NYSE Composite Price</h5>
+        <h5>{{ nyse_composite_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>Shanghai Price</h5>
+        <h5>{{ shanghai_price }}</h5>
+    </div>
+    <div style="float:left;margin:15px;text-align:center">
+        <h5>Shenzhen Price</h5>
+        <h5>{{ shenzhen_price }}</h5>
+    </div>
+</div>
+{% endblock %}

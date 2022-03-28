@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Crypto Test
+{% endblock %}
+
+
+{% block body %}
+<div>
+    <div class="stock_prices" style="float:left;margin-top:200px">
+        <u><h4 class="stock_header">Nasdaq</h4></u>
+        <p class="stock_info">${{ nasdaq_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">23.46 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ east_coast_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:left;margin-top:200px">
+        <u><h4 class="stock_header">Hang Seng</h4></u>
+        <p class="stock_info">HK${{ hang_seng_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">6.13 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ hong_kong_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:left;margin-top:200px">
+        <u><h4 class="stock_header">Japan Exchange Group</h4></u>
+        <p class="stock_info">¥{{ japan_exchange_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">6.79 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ japan_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:right;margin-top:200px;align-items:center;">
+        <u><h4 class="stock_header">NYSE COMPOSITE</h4></u>
+        <p class="stock_info">${{ nyse_composite_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">26.64 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ east_coast_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:right;margin-top:200px;align-items:center;">
+        <u><h4 class="stock_header">Bombay Price</h4></u>
+        <p class="stock_info">₹{{ bom_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">3.96 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ bombaytime }}</p>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="stock_prices" style="float:left;margin-top:200px">
+        <u><h4 class="stock_header">Shanghai Stock Market</h4></u>
+        <p class="stock_info">CNY {{ shanghai_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">7.63 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ shanghai_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:left;margin-top:200px">
+        <u><h4 class="stock_header">Shenzhen Stock Market</h4></u>
+        <p class="stock_info">CNY {{ shenzhen_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">5.74 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ hong_kong_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:right;margin-top:200px;align-items:center;">
+        <u><h4 class="stock_header">National India Stock</h4></u>
+        <p class="stock_info">₹{{ national_stock_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">3.77 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ bombaytime }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:right;margin-top:200px;align-items:center;">
+        <u><h4 class="stock_header">London Stock Composite</h4></u>
+        <p class="stock_info">£{{ london_stock_price }}</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">4.05 trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">{{ london_time }}</p>
+        </div>
+    </div>
+    <div class="stock_prices" style="float:right;margin-top:200px;align-items:center;">
+        <u><h4 class="stock_header">Euronext Composite</h4></u>
+        <p class="stock_info">£$$$$$$$$$</p>
+        <div style="background-color:gray;border-color: black;border-radius: 5px;padding: 10px;">
+            <p class="stock_info">MARKET CAP</p>
+            <p class="stock_info">7.33trillion USD</p>
+        </div>
+        <div style="background-color:#1578ad;border-color: white;border-width:3px ;border-radius: 5px;padding: 10px;margin-top:15px;">
+            <p class="time_display">Proper Euronext Time</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
