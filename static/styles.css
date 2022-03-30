@@ -9,7 +9,6 @@ body{
     margin:0;
 }
 
-
 p{
     font-size:90px
 }
@@ -43,6 +42,7 @@ div.notborder:hover{
 
 p.enter{
     color:white;
+    font-size: 65px;
 }
 
 p.enter:hover{
@@ -123,4 +123,104 @@ p.time_display{
     color:white;
     font-size:22px;
     font-family: 'Smokum';
+}
+
+#add_product{
+    text-align: center;
+    float:left;
+    margin-left: 5%;
+    margin-top: 14%;
+    background-color: white;
+    height: 575px;
+    width: 380px;
+    border-color: teal;
+    border-radius: 10%;
+    border-width: 20px;
+    color: black;
+    font-size: 45px;
+    font-family: "BANGERS";
+}
+
+#create_art_sale_event{
+    text-align: center;
+    float:left;
+    margin-left: 3%;
+    margin-top: 14%;
+    background-color: white;
+    height: 175px;
+    width: 380px;
+    border-color: teal;
+    border-radius: 10%;
+    border-width: 20px;
+    color: black;
+    font-size: 45px;
+    font-family: "BANGERS";
+}
+
+#inventory_receipts{
+    text-align: center;
+    float:left;
+    margin-left: 3%;
+    margin-top: 14%;
+    background-color: white;
+    height: 175px;
+    width: 380px;
+    border-color: teal;
+    border-radius: 10%;
+    border-width: 20px;
+    color: black;
+    font-size: 45px;
+    font-family: "BANGERS";
+}
+
+#analytics{
+    text-align: center;
+    float:left;
+    margin-top:2%;
+    margin-left: 3%;
+    background-color: white;
+    height: 570px;
+    width: 800px;
+    border-color: teal;
+    border-radius: 10%;
+    border-width: 20px;
+    color: black;
+    padding:70px;
+    font-size: 75px;
+    font-family: "BANGERS";
+}
+#create_transaction{
+    position: absolute;
+    text-align: center;
+    float:left;
+    margin-left: 5%;
+    margin-top: 59%;
+    background-color: white;
+    height: 175px;
+    width: 380px;
+    border-color: teal;
+    border-radius: 10%;
+    border-width: 20px;
+    color: black;
+    padding-top:20px;
+    font-size: 45px;
+    font-family: "BANGERS";
+}
+
+div.nav_bar{
+    background-color: gray;
+    opacity: 0.5;
+    width: 100%;
+    height:10%
+}
+
+#product_form{
+    margin-top: 50px;
+    font-size: 16px;
+    font-family: "Merriweather";
+}
+
+#submit_product{
+    background-color:blue;
+    color:white;
 }

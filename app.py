@@ -66,3 +66,8 @@ def crypto():
         return render_template("crypto_test.html", nasdaq_price=nasdaq_price, nyse_composite_price=nyse_composite_price, bom_price=bom_price, hang_seng_price=hang_seng_price, japan_exchange_price=japan_exchange_price, national_stock_price=national_stock_price, london_stock_price=london_stock_price, shanghai_price=shanghai_price, shenzhen_price=shenzhen_price,
             shanghai_time=shanghai_time,east_coast_time=east_coast_time, hong_kong_time=hong_kong_time,london_time=london_time, japan_time=japan_time, bombaytime=bombaytime)
         ##return render_template("crypto_homepage.html", nasdaq_price=nasdaq_price, national_stock_price=national_stock_price, nyse_composite_price=nyse_composite_price, shanghai_price=shanghai_price, shenzhen_price=shenzhen_price, london_stock_price=london_stock_price, japan_exchange_price=japan_exchange_price, bitcoin_price=bitcoin_price, bom_price=bom_price, hang_seng_price=hang_seng_price)
+
+@app.route("/cmd_index", methods=["get"])
+def cmd_index():
+
+    return render_template("cmd_index.html")
