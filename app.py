@@ -32,42 +32,83 @@ def bobbygfitness():
 @app.route("/crypto", methods=["get"])
 def crypto():
 
-        ##Assign the times/zone for each market along with Market Prices
-        ##These are the Manually Scraped DATA for Stock Market Prices
-        bitcoin_price = get_bitcoin_price()
-        
-        bom_price = get_bombay_price()
-        bombaytime = get_time('Asia/Kolkata')
+    ##Assign the times/zone for each market along with Market Prices
+    ##These are the Manually Scraped DATA for Stock Market Prices
+    bitcoin_price = get_bitcoin_price()
+    
+    bom_price = get_bombay_price()
+    bombaytime = get_time('Asia/Kolkata')
 
-        hang_seng_price = get_hangseng_price()
-        hong_kong_time = get_time('Asia/Hong_Kong')
+    hang_seng_price = get_hangseng_price()
+    hong_kong_time = get_time('Asia/Hong_Kong')
 
-        japan_exchange_price = get_japan_exchange_price()
-        japan_time = get_time("Japan")
+    japan_exchange_price = get_japan_exchange_price()
+    japan_time = get_time("Japan")
 
-        london_stock_price = get_london_exchange_price()
-        london_time = get_time("Europe/Dublin")
+    london_stock_price = get_london_exchange_price()
+    london_time = get_time("Europe/Dublin")
 
-        nasdaq_price = get_nasdaq_price()
-        east_coast_time = get_time("US/Eastern")
+    nasdaq_price = get_nasdaq_price()
+    east_coast_time = get_time("US/Eastern")
 
-        national_stock_price = get_national_price()
-        ##This is the same as bombay_time
+    national_stock_price = get_national_price()
+    ##This is the same as bombay_time
 
-        nyse_composite_price = get_nyse_composite_price()
-        #This is the same as east_coast_time from U=S
+    nyse_composite_price = get_nyse_composite_price()
+    #This is the same as east_coast_time from U=S
 
-        shanghai_price = get_shanghai_price()
-        shanghai_time = get_time("Asia/Shanghai")
+    shanghai_price = get_shanghai_price()
+    shanghai_time = get_time("Asia/Shanghai")
 
-        shenzhen_price = get_shenzhen_price()
-        ##This is the same as Hong_kong Time
+    shenzhen_price = get_shenzhen_price()
+    ##This is the same as Hong_kong Time
 
-        return render_template("crypto_test.html", nasdaq_price=nasdaq_price, nyse_composite_price=nyse_composite_price, bom_price=bom_price, hang_seng_price=hang_seng_price, japan_exchange_price=japan_exchange_price, national_stock_price=national_stock_price, london_stock_price=london_stock_price, shanghai_price=shanghai_price, shenzhen_price=shenzhen_price,
-            shanghai_time=shanghai_time,east_coast_time=east_coast_time, hong_kong_time=hong_kong_time,london_time=london_time, japan_time=japan_time, bombaytime=bombaytime)
-        ##return render_template("crypto_homepage.html", nasdaq_price=nasdaq_price, national_stock_price=national_stock_price, nyse_composite_price=nyse_composite_price, shanghai_price=shanghai_price, shenzhen_price=shenzhen_price, london_stock_price=london_stock_price, japan_exchange_price=japan_exchange_price, bitcoin_price=bitcoin_price, bom_price=bom_price, hang_seng_price=hang_seng_price)
+    return render_template("crypto_test.html", nasdaq_price=nasdaq_price, nyse_composite_price=nyse_composite_price, bom_price=bom_price, hang_seng_price=hang_seng_price, japan_exchange_price=japan_exchange_price, national_stock_price=national_stock_price, london_stock_price=london_stock_price, shanghai_price=shanghai_price, shenzhen_price=shenzhen_price,
+        shanghai_time=shanghai_time,east_coast_time=east_coast_time, hong_kong_time=hong_kong_time,london_time=london_time, japan_time=japan_time, bombaytime=bombaytime)
+    ##return render_template("crypto_homepage.html", nasdaq_price=nasdaq_price, national_stock_price=national_stock_price, nyse_composite_price=nyse_composite_price, shanghai_price=shanghai_price, shenzhen_price=shenzhen_price, london_stock_price=london_stock_price, japan_exchange_price=japan_exchange_price, bitcoin_price=bitcoin_price, bom_price=bom_price, hang_seng_price=hang_seng_price)
+ 
 
 @app.route("/cmd_index", methods=["get"])
 def cmd_index():
 
     return render_template("cmd_index.html")
+    
+
+@app.route("/add_art", methods=["get"])
+def add_art():
+
+    return render_template("cmd_add_art_event.html")
+
+
+
+@app.route("/receipts_inv", methods=["get"])
+def receipt_inv():
+
+    return render_template("cmd_receipts_inventory.html")
+
+
+
+@app.route("/analytics", methods=["get"])
+def analytics():
+
+    return render_template("cmd_analytics.html")
+
+
+
+@app.route("/inventory", methods=["get"])
+def inventory():
+
+    return render_template("cmd_inventory.html")
+
+
+
+@app.route("/receipts", methods=["get"])
+def receipts():
+
+    return render_template("cmd_receipts.html")
+
+
+@app.route("/transactions", methods=["get"])
+def transactions():
+
+    return render_template("cmd_transactions.html")

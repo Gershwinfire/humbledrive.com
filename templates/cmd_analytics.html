@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="margin-right:170px;">
+        <a href="/index"><img src="/static/galaxy sphere.jpg" style="width:42px;height:42px;"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'BANGERS';font-size: 25px;";>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/cmd_index">Overview <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/transactions">Transactions</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/inventory">Inventory</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/receipts">Receipts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/analytics">Analytics</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<p id="dashboard">DASHBOARD</p>
+<div style="margin:auto">
+    <div style="margin:auto">
+        <div class="analytics_button" style="float:left;">
+            <p>Earnings</p>
+        </div>
+        <div class="analytics_button" style="float:left;border-color: rgb(194, 75, 75);">
+            <p>Total Events Attended</p>
+        </div>
+        <div class="analytics_button" style="float:left;border-color: rgb(109, 206, 71)">
+            <p>Total Pieces Sold</p>
+        </div>
+    </div>
+</div>
+
+<div style="margin:auto">
+    <div style="margin:auto">
+        <div class="analytics_button" style="float:left;border-color: rgb(109, 206, 71)">
+            <p>Total Inventory Count</p>
+        </div>
+        <div class="analytics_button" style="float:left;">
+            <p>Highest Grossing Piece</p>
+        </div>
+        <div class="analytics_button" style="float:left;border-color: rgb(194, 75, 75)">
+            <p>Total Events still to Attend</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

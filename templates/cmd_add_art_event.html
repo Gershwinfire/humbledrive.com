@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="margin-right:170px;">
+        <a href="/index"><img src="/static/galaxy sphere.jpg" style="width:42px;height:42px;"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'BANGERS';font-size: 25px;";>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/overview">Overview <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/transactions">Transactions</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/inventory">Inventory</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/receipts">Receipts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/analytics">Analytics</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<div>
+    <div class="add_art_event">
+        <p style="font-size:50px">ADD ART EVENT</p>
+        <form>
+            <input type="text" autofocus autocomplete="off" id="eventname" placeholder="Event Name" style="margin:20px;"><br>
+            <input type="text" autocomplete="off" id="eventname" placeholder="Event Location" style="margin:20px;"><br>
+            <input type="text" autocomplete="off" id="eventname" placeholder="Event Dates" style="margin:20px;"><br>
+            <input type="text" autocomplete="off" id="eventname" placeholder="Event Cost" style="margin:20px;"><br>
+            <input type="submit" value="CREATE" style="background-color:blue;color:white;">
+        </form>
+    </div>
+</div> 
+{% endblock %}
